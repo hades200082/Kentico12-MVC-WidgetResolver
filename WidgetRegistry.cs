@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 
-namespace Distinction.Kentico12.MVC.WidgetResolver
+namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     public class WidgetRegistry : IWidgetRegistry
     {

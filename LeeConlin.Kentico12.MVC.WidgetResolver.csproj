@@ -7,8 +7,8 @@
     <ProjectGuid>{462A52B3-C50A-4284-8C46-4EDDF9AFB4A2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Distinction.Kentico12.MVC.WidgetResolver</RootNamespace>
-    <AssemblyName>Distinction.Kentico12.MVC.WidgetResolver</AssemblyName>
+    <RootNamespace>LeeConlin.Kentico12.MVC.WidgetResolver</RootNamespace>
+    <AssemblyName>LeeConlin.Kentico12.MVC.WidgetResolver</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

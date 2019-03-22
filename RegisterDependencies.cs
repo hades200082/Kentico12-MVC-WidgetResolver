@@ -1,7 +1,6 @@
-﻿using System.Web.Mvc;
-using Autofac;
+﻿using Autofac;
 
-namespace Distinction.Kentico12.MVC.WidgetResolver
+namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     public static class RegisterDependencies
     {

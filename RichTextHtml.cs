@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Distinction.Kentico12.MVC.WidgetResolver
+namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     public class RichTextHtml : IWidgetModel, IComparable<string>, IEquatable<string>
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json.Linq;
 
-namespace Distinction.Kentico12.MVC.WidgetResolver
+namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     public class WidgetRegistration
     {

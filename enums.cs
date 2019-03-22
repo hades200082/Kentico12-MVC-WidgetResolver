@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Distinction.Kentico12.MVC.WidgetResolver
+namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     [Flags]
     public enum UnknownWidgetBehaviour

@@ -1,4 +1,4 @@
-﻿namespace Distinction.Kentico12.MVC.WidgetResolver
+﻿namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     public interface IWidgetModel
     {

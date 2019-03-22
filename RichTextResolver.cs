@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using CMS.Base;
-using CMS.Helpers.Caching.Abstractions;
-using Microsoft.Web.Services3.Referral;
 using Newtonsoft.Json.Linq;
 
-namespace Distinction.Kentico12.MVC.WidgetResolver
+namespace LeeConlin.Kentico12.MVC.WidgetResolver
 {
     public class RichTextResolver : IRichTextResolver
     {
