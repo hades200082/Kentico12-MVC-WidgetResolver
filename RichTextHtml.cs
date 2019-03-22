@@ -23,7 +23,7 @@ namespace LeeConlin.Kentico12.MVC.WidgetResolver
         /// <inheritdoc />
         public int CompareTo(string other)
         {
-            return HtmlStringData.CompareTo(other);
+            return string.Compare(HtmlStringData, other, StringComparison.Ordinal);
         }
 
         public override string ToString()
@@ -47,7 +47,7 @@ namespace LeeConlin.Kentico12.MVC.WidgetResolver
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((RichTextHtml) obj);
         }
 

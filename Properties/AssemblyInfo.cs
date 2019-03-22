@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Distinction.Kentico12.MVC.WidgetResolver")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A widget resolver for use with Kentico 12 MVC sites and allowing the use of Portal Engine widgets as structured data in RichText areas.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Distinction.Kentico12.MVC.WidgetResolver")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright Lee Conlin ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
