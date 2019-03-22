@@ -6,9 +6,8 @@ This package can be used to parse out Portal Engine widgets from Rich Text field
 
 **Nuget Package Manager** 
 
-```
-Install-Package LeeConlin.Kentico12.MVC.WidgetResolver
-```
+Note: This package has not been released yet. Once it is released I'll include nuget details here.
+
 
 ## Usage
 
