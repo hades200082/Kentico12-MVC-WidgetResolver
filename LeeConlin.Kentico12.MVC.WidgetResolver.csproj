@@ -486,6 +486,7 @@
     <None Include="LeeConlin.Kentico12.MVC.WidgetResolver.nuspec" />
     <None Include="LICENSE.md" />
     <None Include="packages.config" />
+    <None Include="CONTRIBUTING.md" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
