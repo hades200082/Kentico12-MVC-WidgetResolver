@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
@@ -13,5 +13,8 @@
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright Lee Conlin 2019</copyright>
     <tags>kentico mvc</tags>
+    <dependencies>
+      <dependency id="Kentico.Libraries" version="[12.0,12.1)" />
+    </dependencies>
   </metadata>
 </package>
