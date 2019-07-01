@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
@@ -43,6 +44,27 @@ namespace LeeConlin.Kentico12.MVC.WidgetResolver
                 var codename = widgetObj.Property("name").Value.ToString();
                 var type = WidgetRegistry.GetWidgetType(codename);
 
+                if (!unknownWidgetBehaviour.HasFlag(UnknownWidgetBehaviour.Ignore))
+                {
+                    if (unknownWidgetBehaviour.HasFlag(UnknownWidgetBehaviour.WriteErrorInline) && type == null)
+                    {
+                        rt.Add(new RichTextHtml(
+                            $"<div style=\"border: 1px solid #f00; padding: 5px; margin: 5px; background: #fff; color: #f00\"><p>Widget of type '{codename}' is not a valid and registered MVC widget.</p></div>"));
+                    }
+
+                    if (unknownWidgetBehaviour.HasFlag(UnknownWidgetBehaviour.WriteErrorToLog) && type == null)
+                    {
+                        EventLogProvider.LogWarning("RichTextResolver::Resolve", "UNKNOWN_WIDGET", null,
+                            SiteContext.CurrentSiteID,
+                            $"Widget of type '{codename}' is not a valid and registered MVC widget.");
+                    }
+
+                    if (unknownWidgetBehaviour.HasFlag(UnknownWidgetBehaviour.ThrowException) && type == null)
+                    {
+                        throw new Exception($"Widget of type '{codename}' is not a valid and registered MVC widget.");
+                    }
+                }
+
                 if (type != null)
                 {
                     rt.Add(WidgetResolver.Resolve(widgetObj, type));
@@ -69,14 +91,14 @@ namespace LeeConlin.Kentico12.MVC.WidgetResolver
                 var match = Regex.Match(field, WIDGET_INTERNAL_REGEX);
                 if (match.Success)
                 {
-                    if(match.Groups.Count < 3) continue;
+                    if (match.Groups.Count < 3) continue;
 
                     var fieldName = match.Groups[1].Value;
                     var value = match.Groups[2].Value;
 
                     if (int.TryParse(value, NumberStyles.Integer, null, out int iVal))
                     {
-                        obj.Add(fieldName,iVal);
+                        obj.Add(fieldName, iVal);
                     }
                     else if (decimal.TryParse(value, NumberStyles.Float, null, out decimal dVal))
                     {
