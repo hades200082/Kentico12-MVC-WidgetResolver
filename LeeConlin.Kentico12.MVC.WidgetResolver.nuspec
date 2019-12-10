@@ -3,14 +3,13 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>$title$</title>
+    <title>LeeConlin.Kentico12.MVC.WidgetResolver</title>
     <authors>leeconlin</authors>
     <owners>leeconlin</owners>
     <licenseUrl>https://github.com/hades200082/Kentico12-MVC-WidgetResolver/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://github.com/hades200082/Kentico12-MVC-WidgetResolver</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <description>A widget resolver for use with Kentico 12 MVC sites and allowing the use of Portal Engine widgets as structured data in RichText areas.</description>
     <copyright>Copyright Lee Conlin 2019</copyright>
     <tags>kentico mvc</tags>
     <dependencies>
