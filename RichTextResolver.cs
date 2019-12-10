@@ -1,7 +1,9 @@
 ﻿using System;
-using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using CMS.EventLog;
+using CMS.Helpers;
+using CMS.SiteProvider;
 using Newtonsoft.Json.Linq;
 
 namespace LeeConlin.Kentico12.MVC.WidgetResolver
@@ -111,7 +113,10 @@ namespace LeeConlin.Kentico12.MVC.WidgetResolver
                     else
                     {
                         // Otherwise just add it as a string
-                        obj.Add(fieldName, value);
+                        obj.Add(fieldName, Uri.UnescapeDataString(value));
+                        /**
+                         * Kentico seems to URL Encode the entire contents of strings in widgets.
+                         */
                     }
                 }
             }
