@@ -13,7 +13,7 @@ namespace LeeConlin.Kentico12.MVC.WidgetResolver
     {
         public IWidgetResolver WidgetResolver { get; }
         public IWidgetRegistry WidgetRegistry { get; }
-        private const string WIDGET_REGEX = @"\{\^widget\|(.+)\^\}";
+        private const string WIDGET_REGEX = @"\{\^widget\|(.+?)\^\}";
         private const string WIDGET_INTERNAL_REGEX = @"^\(([a-zA-Z0-9]+)\)(.+)$";
 
         public RichTextResolver(IWidgetResolver widgetResolver, IWidgetRegistry widgetRegistry)
